@@ -1,0 +1,82 @@
+API v1
+======
+
+The Puppeteer API uses :abbr:`REST (Representational State Transfer)`.
+JSON is returned by all API responses including errors
+and HTTP response status codes are to designate success and failure.
+
+.. warning::
+
+    API v1 is planned to be deprecated soon, though we have not yet set a time
+    frame for deprecation yet. We will alert users with our plans when we do.
+
+    For now, API v1 is still used by some legacy application operations still,
+    but we highly recommend PuppeteerAPI users use :doc:`API v2</api/v2>`
+    instead.
+
+    * Token based authentication
+    * Easier to use URLs which no longer use numerical ids
+    * More common user actions are exposed through the API
+    * Improved error reporting
+
+    See its full documentation at :doc:`/api/v2`.
+
+
+Authentication and authorization
+--------------------------------
+
+Requests to the api are for public information only and do not require any authentication.
+
+Resources
+---------
+
+Projects
+~~~~~~~~
+
+Teams are the main place and grouping of data for Puppeteer.
+
+.. _Teams Dashboard: https://app.puppeteer.to/
+
+Team Details
+++++++++++++
+
+.. http:get::  /api/v1/team/
+
+    Retrieve a list of all publicly available details.
+
+    **Example request**:
+
+    .. prompt:: bash $
+
+        curl https://api.puppeteer.to/api/v1/team/?id=133712462
+
+    **Example response**:
+
+    .. sourcecode:: js
+
+        {
+            "memberCount": 1,
+            "memberVisibility": true,
+            "ownerVisibility": true,
+            "companyDomain": "https://domain.com",
+            "members": {"owners":{"0":{[USER_OBJECT]}},"users":{"0":{[USER_OBJECT]}}}
+        }
+
+    :>json integer memberCount: Users enrolled in team.
+    :>json boolean memberVisibility: Show enrolled member details.
+    :>json boolean ownerVisibility: Show enrolled owner details.
+    :>json string companyDomain: Company domain registered & verified.
+    :>json array members: JSON list split by ``Access Rank`` and includes a list of users from 0->n.
+
+    :query string slug: Increase the results by adding your API_KEY to the request to get additional data.
+
+Undocumented resources and endpoints
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are some undocumented endpoints in the API.
+These should not be used and could change at any time.
+These include:
+
+* The search API (``/api/v1/search/``)
+* Endpoints used for advertising (``/api/v2/sustainability/``)
+* Any other endpoints not detailed above.
