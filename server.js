@@ -5,6 +5,8 @@ const app = express();
 
 const AuthorizationRouter = require('./authorization/routes.config');
 const UsersRouter = require('./users/routes.config');
+const ContentRouter = require('./page/routes.config');
+const PublicRouter = require('./public/routes.config');
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -22,6 +24,8 @@ app.use(function (req, res, next) {
 app.use(express.json());
 AuthorizationRouter.routesConfig(app);
 UsersRouter.routesConfig(app);
+ContentRouter.routesConfig(app);
+PublicRouter.routesConfig(app);
 
 
 app.listen(80, function () {
