@@ -1,3 +1,3 @@
-<b>WE'VE TEMPORARILY SUSPENDED DEVELOPMENT UNTIL FURTHER NOTICE, WE AIM TO RESUME DEVELOPMENT WITHIN THE NEXT MONTH</b>
+<b>03/11/2023 >> We've started development on the BeClone project. Keep an eye on changelog and updates for more information.</b>
 <img width="100%" height="100%" src="https://user-images.githubusercontent.com/61476690/192112011-220ddc35-cdd7-4494-8800-9f54c8f70f64.png"/><img width="100%" height="100%" src="https://user-images.githubusercontent.com/61476690/192109868-d3b88fbf-acb0-4797-94ee-30521b82d248.png"/><img width="100%" height="100%" src="https://user-images.githubusercontent.com/61476690/192146449-25ded4c9-a04f-481c-ba8b-4d1af58def7b.png"/><a href="https://forms.gle/E9Myp725GLgXpjDi8"><img width="100%" height="100%" src="https://user-images.githubusercontent.com/61476690/192146521-bc7215b4-14c3-4058-80d0-0f0111288e24.png"/></a>
 
